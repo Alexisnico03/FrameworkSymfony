@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue sur notre site {% endblock %}
+
+        {% block body %}
+        <h1> Bienvenue sur mon site de vente de trucs </h1>
+            {% for item in liste %}
+            <article>
+            <h2> nom du modele : {{ item.titre}}</h2>
+            <p> description du modele : {{ item.description}} </p>
+            <small> Prix : {{ item.prix|format_currency('EUR', locale='fr') }}</small>
+            </article>
+            {% endfor %}
+        {% endblock %}
