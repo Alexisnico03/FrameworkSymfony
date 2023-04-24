@@ -9,6 +9,8 @@
             <h2> nom du modele : {{ item.titre}}</h2>
             <p> description du modele : {{ item.description}} </p>
             <small> Prix : {{ item.prix|format_currency('EUR', locale='fr') }}</small>
+
+
             </article>
             {% endfor %}
         {% endblock %}

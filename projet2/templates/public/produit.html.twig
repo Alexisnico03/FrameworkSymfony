@@ -9,6 +9,10 @@
     <p>Nom : {{ produit.Titre }}</p>
     <p>Description : {{ produit.Description }}</p>
     <p>Prix : {{ produit.Prix }} €</p>
+
+                <a href="{{ path('commande', {'id': produit.id}) }}">
+    Commander
+    </a>
 </article>
  
 {% endblock %}

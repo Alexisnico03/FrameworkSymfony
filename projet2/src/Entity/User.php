@@ -28,7 +28,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $Adresse = null;
 
     #[ORM\Column(length: 255, nullable:true)]
-    private ?string $CP = null;
+    private ?string $codepostal = null;
 
     #[ORM\Column(length: 255, nullable:true)]
     private ?string $Ville = null;
@@ -98,14 +98,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getCP(): ?string
+    public function getCodepostal(): ?string
     {
-        return $this->CP;
+        return $this->codepostal;
     }
 
-    public function setCP(string $CP): self
+    public function setCodepostal(string $codepostal): self
     {
-        $this->CP = $CP;
+        $this->codepostal = $codepostal;
 
         return $this;
     }
